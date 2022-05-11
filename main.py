@@ -15,7 +15,7 @@ def disconnect_db(mydb, cursor):
     return mydb, cursor
 
 def s(mydb, cursor):
-    with open('queries.txt', 'r', encoding='UTF-8') as f:
+    with open('Queries\\db.txt', 'r', encoding='UTF-8') as f:
         query = f.readline()
         
         while query != '':
