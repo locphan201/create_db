@@ -122,6 +122,6 @@ INSERT INTO Products (pname, price) VALUES ('Pate chaud', 4.88);
 INSERT INTO Products (pname, price) VALUES ('Salted egg sponge', 3.09);
 INSERT INTO Products (pname, price) VALUES ('Sponge cake', 3.54);
 -- Create table Orders -- 
-CREATE TABLE Orders (oID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, cID INT UNSIGNED, FOREIGN KEY(cID) REFERENCES Customers(cID), date DATE, sID INT UNSIGNED, price DECIMAL(4,2), FOREIGN KEY(sID) REFERENCES Staffs(sID));
+CREATE TABLE Orders (oID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, cID INT UNSIGNED, FOREIGN KEY(cID) REFERENCES Customers(cID), date DATE, price DECIMAL(5,2), type VARCHAR(15));
 -- Create table Contains --
 CREATE TABLE Contains (oID INT UNSIGNED, pID INT UNSIGNED, quantity INT, PRIMARY KEY (pID, oID), FOREIGN KEY (pID) REFERENCES Products(pID), FOREIGN KEY (oID) REFERENCES Orders(oID));
